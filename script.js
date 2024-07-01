@@ -1,19 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
-    async function fetchProducts() {
-        try {
-            const response = await fetch('https://germancortez.pythonanywhere.com/productos');
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            const data = await response.json();
-            return data;
-        } catch (error) {
-            console.error('Error al obtener los productos:', error);
-            return [];
-        }
-    }
+                                                                       
 
     async function initialize() {
         try {
